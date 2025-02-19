@@ -72,7 +72,7 @@ def createJWT(username, secret, authz):
     )
     
     
-@server.route("/validate", method=["POST"])
+@server.route("/validate", methods=["POST"])
 def validate():
     # Extract Bearer token from auth header
     encoded_jwt = request.headers["Authorization"]
