@@ -41,7 +41,7 @@ def login():
     # query db for username and password
     cur = mysql.connection.cursor()
     res = cur.execute(
-        "SELECT email, password FROM user where email=%s", (auth.username)
+        "SELECT email, password FROM user where email=%s", (auth.username,)
     )
     
     if res > 0:

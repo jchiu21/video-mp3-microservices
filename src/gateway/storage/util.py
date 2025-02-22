@@ -26,5 +26,3 @@ def upload(f, fs, channel, access):
     except:
         fs.delete(fid) # delete file from gridFS cannot be published to rabbitMQ
         return "internal server error", 500
-        
-        
