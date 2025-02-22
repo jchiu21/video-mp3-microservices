@@ -11,14 +11,16 @@ spec:
       app: gateway
   strategy:
     type: RollingUpdate
+    rollingUpdate:
       maxSurge: 3
   template: 
     metadata:
       labels:
         app: gateway
     spec:
-      - name: gatway
-        image: jamiechiu/gatway
+      containers:
+      - name: gateway
+        image: jamiechiu/gateway
         envFrom:
         - configMapRef:
             name: gateway-configmap
