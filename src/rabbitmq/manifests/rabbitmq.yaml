@@ -28,7 +28,7 @@ spec:
             - secretRef:
                 name: rabbitmq-secret
           volumeMounts:
-            - mountPath: C:\ProgramData\RabbitMQ
+            - mountPath: /mnt/data/rabbitmq
               name: rabbitmq-volume
       volumes:
         - name: rabbitmq-volume
